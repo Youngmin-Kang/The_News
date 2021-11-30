@@ -104,30 +104,37 @@ public final class News {
             throw new IllegalArgumentException("Title required");
         }
         this.title = title;
+
         // Source
         if (source == null || source.length() < 2) {
             throw new IllegalArgumentException("Source required");
         }
         this.source = source;
+
         // Author
         if (author == null || author.length() < 3) {
             throw new IllegalArgumentException("Author required");
         }
         this.author = author;
+
         //ID: Hashing(title + | + source + | + author)
         this.id = LongHashFunction.xx().hashChars(title + "|" + source + "|" + author);
+
         this.url = url;
         this.urlImage = urlImage;
+
         // Description
         if (description == null || description.length() < 4) {
             throw new IllegalArgumentException("Description required");
         }
         this.description = description;
+
         //Content
         if (content == null || content.length() < 2) {
             throw new IllegalArgumentException("Content required");
         }
         this.content = content;
+
         //PublishedAt
         if (publishedAt == null) {
             throw new IllegalArgumentException("Published At required");
