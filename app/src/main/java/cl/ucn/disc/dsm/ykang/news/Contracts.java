@@ -28,7 +28,7 @@ import java.util.List;
  */
 public interface Contracts {
     /**
-     * @return all the News in the backend.
+     * @return all the News in the backend ordered by publishedAt.
      */
-    List<News> retrieveNews();
+    List<News> retrieveNews(int size);
 }
